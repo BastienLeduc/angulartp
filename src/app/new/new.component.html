@@ -1,0 +1,12 @@
+<div *ngFor="let yt of youtubers">
+  <div *ngIf="yt.followers>100000">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">{{yt.name}}</h5>
+			<p class="card-text">{{yt.followers}}</p>
+			<p class="card-text">{{yt.description}}</p>
+      <button class="btn btn-outline-primary" (click)="notify.emit()">Like</button>
+		</div>
+	</div>
+  </div>
+</div>
